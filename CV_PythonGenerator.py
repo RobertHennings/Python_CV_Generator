@@ -30,7 +30,7 @@ Education2_Title = "University Duisburg-Essen, Campus Essen"
 Position2_Title = "Bachelor of Science: Business Administration, Energy and Finance"
 Position2_Grade = "2,1 (GPA: ~3,0)"
 Position2_Thesis = "Thesis: Is liquidity risk still priced in the cross-section of US stocks? (R, Python based) Grade: 1,3 (GPA: 3,7, see Github)"
-Position2_RelevantCourses = "Relevant Courses: Investment and Finance, Asset Management, Introduction to Derivatives, Descriptive Statistics, Statistical Inference,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBusiness Statistics, Introduction to Econometrics, Database Management Systems, Statistics and Computing"
+Position2_RelevantCourses = "Relevant Courses: Investment and Finance, Asset Management, Introduction to Derivatives, Descriptive Statistics, Statistical\n\t\t\t\t\t\t\t\t\t\t\tInference, Business Statistics, Introduction to Econometrics, Database Management Systems, Statistics and Computing"
                              
 
 
@@ -87,7 +87,7 @@ Info4 = "Interests: competitive sports athletics, powerlifting, kiteboarding/wak
 # Drawing the CV plot and placing the elements
 # Setting style for bar graphs
 import matplotlib.pyplot as plt
-%matplotlib inline
+#%matplotlib inline
 # set font
 plt.rcParams['font.family'] = 'Arial'
 plt.rcParams['font.sans-serif'] = 'STIXGeneral'
@@ -118,14 +118,16 @@ plt.axhline(y=.897, xmin=0.02, xmax=0.98, color='black', linewidth=1.3)
 # Current Degree
 plt.annotate(Education1_Title, (.02,.88), weight='bold', fontsize=8) # 7 fett
 plt.annotate("Kiel", (.955,.88), weight='regular', fontsize=8) # 7 fett
-plt.annotate(Position1_Title, (.02,.866), weight='regular', fontsize=8) # 7 kursiv
-plt.annotate("10/2021 - today", (.875,.866), weight='regular', fontsize=8) 
+#plt.annotate(Position1_Title, (.02,.866), weight='regular', fontsize=8) # 7 kursiv
+plt.text(.02,.866,Position1_Title,fontsize = 8, style = "italic")
+plt.annotate("10/2021 - today", (.864,.866), weight='regular', fontsize=8) 
 #plt.text(.02,.87,"Text", fontstyle = "italic",fontsize=7)
 # Previous Degree
 plt.annotate(Education2_Title, (.02,.84), weight='bold', fontsize=8) # 7 fett
 plt.annotate("Essen", (.945,.84), weight='regular', fontsize=8) # 7 fett
-plt.annotate(Position2_Title, (.02,.826), weight='regular', fontsize=8) # 7 kursiv
-plt.annotate("10/2018 - 10/2021", (.855,.826), weight='regular', fontsize=8) # 7 kursiv
+#plt.annotate(Position2_Title, (.02,.826), weight='regular', fontsize=8) # 7 kursiv
+plt.text(.02,.826,Position2_Title,fontsize = 8, style = "italic")
+plt.annotate("10/2018 - 10/2021", (.845,.826), weight='regular', fontsize=8) # 7 kursiv
 plt.annotate(Position2_Grade, (.02,.811), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position2_Thesis, (.02,.797), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position2_RelevantCourses, (.02,.768), weight='regular', fontsize=8) # 7 normal
@@ -136,7 +138,7 @@ plt.annotate(Section2_Title, (.02,.738), weight='heavy', fontsize=10, color='bla
 plt.axhline(y=.735, xmin=0.02, xmax=0.98, color='black', linewidth=1.3)
 # Position 1
 plt.annotate(Position1_Company, (.02,.718), weight='bold', fontsize=8)  # 7 fett
-plt.annotate("Hamburg", (0.865,.718), weight='regular', fontsize=8)# 
+plt.annotate("Hamburg", (0.913,.718), weight='regular', fontsize=8)# 
 
 plt.text(.02,.704,Position1_Job, style='italic', fontsize=8)#
 #plt.annotate(Position1_Job, (.02,.704), weight='regular', fontsize=8)# 7 kursiv
@@ -145,26 +147,29 @@ plt.annotate(Position1_Details1, (.02,.675), weight='regular', fontsize=8) # 7 n
 plt.annotate(Position1_Details2, (.02,.661), weight='regular', fontsize=8) # 7 normal
 # Position 2
 plt.annotate(Position2_Company, (.02,.638), weight='bold', fontsize=8)  # 7 fett
-plt.annotate("Frankfurt am Main", (0.865,.638), weight='regular', fontsize=8)# 
-plt.annotate(Position2_Job, (.02,.624), weight='regular', fontsize=8)# 7 kursiv
-plt.annotate("07/2022 - 11/2022", (0.865,.624), weight='regular', fontsize=8)# 
+plt.annotate("Frankfurt am Main", (0.845,.638), weight='regular', fontsize=8)# 
+#plt.annotate(Position2_Job, (.02,.624), weight='regular', fontsize=8)# 7 kursiv
+plt.text(.02,.624,Position2_Job, style='italic', fontsize=8)#
+plt.annotate("07/2022 - 11/2022", (0.845,.624), weight='regular', fontsize=8)# 
 plt.annotate(Position2_Details1, (.02,.61), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position2_Details2, (.02,.582), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position2_Details3, (.02,.568), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position2_Details4, (.02,.553), weight='regular', fontsize=8) # 7 normal
 # Position 3
 plt.annotate(Position3_Company, (.02,.53), weight='bold', fontsize=8)  # 7 fett
-plt.annotate("Frankfurt am Main", (0.865,.53), weight='regular', fontsize=8)# 
-plt.annotate(Position3_Job, (.02,.516), weight='regular', fontsize=8)# 7 kursiv
-plt.annotate("02/2022 - 05/2022", (0.865,.516), weight='regular', fontsize=8)# 
+plt.annotate("Frankfurt am Main", (0.845,.53), weight='regular', fontsize=8)# 
+#plt.annotate(Position3_Job, (.02,.516), weight='regular', fontsize=8)# 7 kursiv
+plt.text(.02,.516,Position3_Job, style='italic', fontsize=8)#
+plt.annotate("02/2022 - 05/2022", (0.845,.516), weight='regular', fontsize=8)# 
 plt.annotate(Position3_Details1, (.02,.502), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position3_Details2, (.02,.488), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position3_Details3, (.02,.474), weight='regular', fontsize=8) # 7 normal
 # Position 4
 plt.annotate(Position4_Company, (.02,.45), weight='bold', fontsize=8)  # 7 fett
-plt.annotate("Hamburg", (0.865,.45), weight='regular', fontsize=8)# 
-plt.annotate(Position4_Job, (.02,.436), weight='regular', fontsize=8)# 7 kursiv
-plt.annotate("11/2021 - today", (0.865,.436), weight='regular', fontsize=8)# 
+plt.annotate("Hamburg", (0.913,.45), weight='regular', fontsize=8)# 
+#plt.annotate(Position4_Job, (.02,.436), weight='regular', fontsize=8)# 7 kursiv
+plt.text(.02,.436,Position4_Job, style='italic', fontsize=8)#
+plt.annotate("11/2021 - today", (0.864,.436), weight='regular', fontsize=8)# 
 plt.annotate(Position4_Details1, (.02,.422), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position4_Details2, (.02,.408), weight='regular', fontsize=8) # 7 normal
 
@@ -185,14 +190,15 @@ plt.annotate(Section4_Title, (.02,.317), weight='heavy', fontsize=10, color='bla
 plt.axhline(y=.313, xmin=0.02, xmax=0.98, color='black', linewidth=1.3)
 
 plt.annotate(Position1_Lead, (.02,.294), weight='regular', fontsize=8) # 7 normal
-plt.annotate("Munich", (0.865,.294), weight='regular', fontsize=8)# 
+plt.annotate("Munich", (0.928,.294), weight='regular', fontsize=8)# 
 plt.annotate(Position2_Lead, (.02,.281), weight='regular', fontsize=8) # 7 normal
-plt.annotate("Kiel", (0.865,.281), weight='regular', fontsize=8)# 
+plt.annotate("Kiel", (0.955,.281), weight='regular', fontsize=8)# 
 plt.annotate(Position3_Lead, (.02,.268), weight='regular', fontsize=8) # 7 normal
-plt.annotate("Essen/Bochum", (0.865,.268), weight='regular', fontsize=8)# 
+plt.annotate("Essen/Bochum", (0.869,.268), weight='regular', fontsize=8)# 
 
-plt.annotate(Position3_Lead_Company , (.02,.254), weight='regular', fontsize=8) # 7 normal
-plt.annotate("11/2020 - today", (0.865,.254), weight='regular', fontsize=8)# 
+#plt.annotate(Position3_Lead_Company , (.02,.254), weight='regular', fontsize=8) # 7 normal
+plt.text(.02,.254,Position3_Lead_Company, style='italic', fontsize=8)#
+plt.annotate("11/2020 - today", (0.864,.254), weight='regular', fontsize=8)# 
 plt.annotate(Position3_Lead_Details1  , (.02,.24), weight='regular', fontsize=8) # 7 normal
 plt.annotate(Position3_Lead_Details2  , (.02,.225), weight='regular', fontsize=8) # 7 normal
 
